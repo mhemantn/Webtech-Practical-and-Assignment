@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Demo: Box Model & Backgrounds</title>
+    <link rel="stylesheet" href="practical 2.2.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced CSS Styling</h1>
+        <p>A deep dive into the CSS Box Model, Borders, Margins, Padding, and Background Images.</p>
+    </header>
+    <main>    
+        <section class="concept-section box-model-demo">
+            <h2>1. The CSS Box Model</h2>
+            <p>Every element on a web page is a rectangular box. The <b>Box Model</b> dictates how this box is structured, determining its size, spacing, and appearance.</p> 
+            <div class="box-model-container">
+                <div class="margin-layer">
+                    <p class="layer-label">Margin</p>
+                    <div class="border-layer">
+                        <p class="layer-label">Border</p>
+                        <div class="padding-layer">
+                            <p class="layer-label">Padding</p>
+                            <div class="content-layer">
+                                <p class="layer-label">Content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="explanation">Starting from the inside out: <b>Content</b> is surrounded by <b>Padding</b>, which is surrounded by a <b>Border</b>, and finally, <b>Margin</b> creates space outside the border.</p>
+        </section>
+        <hr>
+        <section class="concept-section spacing-demo">
+            <h2>2. Margins and Padding</h2> 
+            <div class="spacing-example">
+                <p>This is the content inside the box.</p>
+            </div>
+            <div class="code-box">
+                <p><strong>Code Example:</strong></p>
+                <code>padding: 20px 40px; /* Top/Bottom: 20px, Left/Right: 40px */</code><br>
+                <code>margin: 30px 15px; /* Top/Bottom: 30px, Left/Right: 15px */</code>
+            </div>
+            <h3>Key Differences:</h3>
+            <ul>
+                <li><b>Padding:</b> Controls the space <strong>inside</strong> the box, between the content and the border. It takes the element's background color.</li>
+                <li><b>Margin:</b> Controls the space <strong>outside</strong> the box, between elements. It is always transparent.</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="concept-section background-demo">
+            <h2>3. Borders and Background Images</h2>  
+            <div class="background-example">
+                <h3>Styled Section with Background Image</h3>
+                <p>This container has a background image set using the `background-image`, `background-size`, and `background-position` properties. Notice the semi-transparent black overlay for better text readability.</p>
+            </div>
+            <div class="code-box">
+                <p><strong>Code Example:</strong></p>
+                <code>background-image: url('https://picsum.photos/800/200');</code><br>
+                <code>background-size: cover;</code><br>
+                <code>border: 5px solid; border-image: linear-gradient(to right, #00BCD4, #E91E63) 1;</code>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Advanced CSS Demonstration &copy; 2025</p>
+    </footer>
+</body>
+</html>

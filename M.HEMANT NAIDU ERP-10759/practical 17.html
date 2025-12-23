@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listener Demo</title>
+  <style>
+    body { font-family: Arial; }
+    #box {
+      width: 200px;
+      height: 200px;
+      background: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      border: 2px solid black;
+      transition: background 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Event Listener Demo</h2>
+
+  <button id="addMouse">Add Mouse Listener</button>
+  <button id="removeMouse">Remove Mouse Listener</button>
+
+  <p>Keyboard Event: Press any key to change text below</p>
+  <h3 id="keyText">No key pressed yet...</h3>
+
+  <div id="box">Hover Me</div>
+
+  <script>
+    const box = document.getElementById("box");
+
+    // ---------- Mouse Event ----------
+    function mouseHover() {
+      box.style.background = "lightgreen";
+      box.innerText = "Mouse Over!";
+    }
+
+    function mouseLeave() {
+      box.style.background = "lightgray";
+      box.innerText = "Hover Me";
+    }
+
+    document.getElementById("addMouse").addEventListener("click", () => {
+      box.addEventListener("mouseover", mouseHover);
+      box.addEventListener("mouseout", mouseLeave);
+      alert("Mouse Events Added");
+    });
+
+    document.getElementById("removeMouse").addEventListener("click", () => {
+      box.removeEventListener("mouseover", mouseHover);
+      box.removeEventListener("mouseout", mouseLeave);
+      alert("Mouse Events Removed");
+    });
+
+    // ---------- Keyboard Event ----------
+    const keyText = document.getElementById("keyText");
+
+    document.addEventListener("keydown", (e) => {
+      keyText.textContent = "You pressed: " + e.key;
+    });
+  </script>
+</body>
+</html>

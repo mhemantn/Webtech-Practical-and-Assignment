@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Demo</title>
+  <style>
+    body { font-family: Arial; }
+    #container {
+      border: 2px solid black;
+      padding: 15px;/
+      width: 300px;
+      margin-top: 20px;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>DOM Manipulation: Add / Modify / Remove</h2>
+
+  <button id="addBtn">Add Element</button>
+  <button id="modifyBtn">Modify 1st Child</button>
+  <button id="removeBtn">Remove Last Child</button>
+
+  <div id="container">
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+  </div>
+
+  <script>
+    const list = document.getElementById("list");
+
+    // ----------- APPEND NEW ELEMENT -----------
+    document.getElementById("addBtn").addEventListener("click", () => {
+      const newItem = document.createElement("li"); 
+      newItem.textContent = "New Item Added";       
+      list.appendChild(newItem);                   
+    });
+
+    // ----------- MODIFY FIRST CHILD -----------
+    document.getElementById("modifyBtn").addEventListener("click", () => {
+      if (list.firstChild) {
+        list.firstElementChild.textContent = "Modified First Item";
+        list.firstElementChild.style.color = "red";
+      }
+    });
+
+    // ----------- REMOVE LAST CHILD -----------
+    document.getElementById("removeBtn").addEventListener("click", () => {
+      if (list.lastChild) {
+        list.removeChild(list.lastElementChild);
+      }
+    });
+  </script>
+</body>
+</html>

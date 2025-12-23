@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    #main_heading {
+        background-color: grey;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 20px;
+        text-align: center;
+    }
+    body {
+        background-color: black;
+        margin: 20px;
+    }
+    footer {
+        background-color: grey;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 20px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-color: black;
+        height: 200px;
+        padding: 20px;
+    }
+    .para {
+        color: beige;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+    }
+    .container p {
+        color: aqua;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    @media(max-width: 600px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+    .image {
+        margin: 20px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .para1,
+    .para2 {
+        margin: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
+<body>
+    <h1 id="main_heading"><b>THIS IS THE HEADING OF THE WEBPAGE</b></h1>
+    <div>
+        <p class="para">
+            The highest mountain on Earth is Mount Everest in the Himalayas of Asia, whose summit is 8,850 m (29,035 ft)
+            above mean sea level. The highest known mountain on any planet in the Solar System is Olympus Mons on Mars
+            at 21,171 m (69,459 ft). The tallest mountain including submarine terrain is Mauna Kea in Hawaii from its
+            underwater base at 9,330 m (30,610 ft); some scientists consider it to be the tallest on earth.
+        </p>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="para1">
+            <p>
+                A mountain is an elevated portion of the Earth's crust, generally with steep sides that show significant
+                exposed bedrock. Although definitions vary, a mountain may differ from a plateau in having a limited
+                summit
+                area, and is usually higher than a hill, typically rising at least 600 metres (2,000 ft) above the
+                surrounding land. A few mountains are isolated summits, but most occur in mountain ranges.
+            </p>
+        </div>
+        <div class="para2">
+            <p>
+                Mountains are formed through tectonic forces, erosion, or volcanism,[1] which act on time scales of up
+                to
+                tens of millions of years.[2] Once mountain building ceases, mountains are slowly leveled through the
+                action
+                of weathering, through slumping and other forms of mass wasting, as well as through erosion by rivers
+                and
+                glaciers.
+            </p>
+        </div>
+        <div class="image">
+            <img src="mountain.jpg" height="180px">
+
+        </div>
+        <hr>
+    </div>
+</body>
+<footer>
+    <hr>
+    CREATED BY: M Hemant NAIDU <br>
+    &COPY; copyright reserved<br>
+    <a href="mailto:m.hemant.naidu@rungta.org">m.hemant.naidu@rungta.org</a>
+    <hr>
+</footer>
+</html>

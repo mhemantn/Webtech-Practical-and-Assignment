@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Layout</title>
+    <style>
+        /* Basic CSS for table readability and borders */
+        table, th, td {
+            border: 1px solid #333;
+            border-collapse: collapse; /* Ensures single lines between cells */
+        }
+        table {
+            width: 80%; /* Table takes up 80% of the container width */
+            margin: 20px auto; /* Centers the table on the page */
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Layout Demonstration</h1>
+    <table>
+        <caption>
+            <h3>Departmental Course Schedule Summary</h3>
+            <p>This table demonstrates the use of merged cells (colspan and rowspan) and content alignment.</p>
+        </caption>
+        <thead>
+            <tr>
+                <th rowspan="2" style="vertical-align: middle;">Semester</th>
+                <th colspan="3" style="text-align: center;">Core Subjects</th>
+                <th rowspan="2" style="vertical-align: middle;">Electives Offered</th>
+            </tr>
+            <tr>
+                <th style="text-align: left;">Theory (Code)</th>
+                <th style="text-align: center;">Lab Hours</th>
+                <th style="text-align: right;">Credits</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semester 1</td>
+                <td style="text-align: left;">Applied Physics (AP101)</td>
+                <td style="text-align: center;">4</td>
+                <td style="text-align: right;">4</td>
+                <td rowspan="2" style="vertical-align: top;">
+                    * Advanced Algebra<BR>
+                    * Introduction to Programming
+                </td>
+            </tr>
+            <tr>
+                <td>Semester 2</td>
+                <td style="text-align: left;">Data Structures (DS202)</td>
+                <td style="text-align: center;">6</td>
+                <td style="text-align: right;">5</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: center; background-color: #f0f0f0;">
+                    Mid-Program Break
+                </td>
+            </tr>
+            <tr>
+                <td>Semester 3</td>
+                <td style="text-align: left;">Operating Systems (OS301)</td>
+                <td style="text-align: center;">4</td>
+                <td style="text-align: right;">4</td>
+                <td rowspan="2" style="vertical-align: bottom;">
+                    * Artificial Intelligence<BR>
+                    * Network Security
+                </td>
+            </tr>
+            <tr>
+                <td>Semester 4</td>
+                <td style="text-align: left;">Database Management (DB404)</td>
+                <td style="text-align: center;">5</td>
+                <td style="text-align: right;">5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align: right;">Total Estimated Credits:</td>
+                <td style="text-align: right; font-weight: bold;">18</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal & External CSS Demo</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="PRACTICAL2.1.CSS">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .internal-box {
+            border: 2px solid #4caf50;
+            padding: 15px;
+            margin: 20px;
+            background: #f2fff2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Styling Methods</h1>
+        <p>Inline, Internal & External CSS demonstration</p>
+    </header>
+
+    <!-- Inline CSS -->
+    <section>
+        <h2 style="color: red; text-decoration: underline;">Inline CSS Example</h2>
+        <p style="font-size: 18px; background: #ffe5e5; padding: 10px;">
+            This paragraph uses inline CSS directly inside the HTML element.
+        </p>
+    </section>
+
+    <!-- Internal CSS applied through class -->
+    <section class="internal-box">
+        <h2>Internal CSS Example</h2>
+        <p>
+            This section is styled using internal CSS defined in the style tag inside the head.
+        </p>
+    </section>
+
+    <!-- External CSS example -->
+    <section class="external-demo">
+        <h2>External CSS Example</h2>
+        <p>
+            This content is styled using CSS rules from an external stylesheet (styles.css).
+        </p>
+    </section>
+
+</body>
+</html>

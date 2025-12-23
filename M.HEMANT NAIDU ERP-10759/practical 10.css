@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+#main-content {
+    width: 80%; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card {
+    background-color: #e0f7fa;
+    border-left: 5px solid #00bcd4;
+    padding: 15px;
+    margin-top: 25px;
+}
+.highlight {
+    background-color: #ffeb3b; 
+    color: #c02d2d; 
+    font-weight: bold;
+    padding: 2px 5px; 
+    border-radius: 3px;
+}
