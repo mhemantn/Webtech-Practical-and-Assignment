@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Canvas Drawing</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid #000"></canvas>
+
+<script>
+// get canvas and context
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+// Rectangle
+ctx.fillStyle = "skyblue";
+ctx.fillRect(20, 20, 120, 80);
+
+// Circle
+ctx.beginPath();
+ctx.arc(250, 60, 40, 0, Math.PI * 2);
+ctx.fillStyle = "orange";
+ctx.fill();
+
+// Triangle
+ctx.beginPath();
+ctx.moveTo(400, 120);
+ctx.lineTo(350, 200);
+ctx.lineTo(450, 200);
+ctx.closePath();
+ctx.fillStyle = "lightgreen";
+ctx.fill();
+</script>
+</body>
+</html>
